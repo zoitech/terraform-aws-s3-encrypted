@@ -19,12 +19,12 @@ resource "aws_s3_bucket" "s3_bucket" {
 }
 
 resource "aws_s3_bucket_public_access_block" "s3_block_public" {
-  bucket = "${aws_s3_bucket.s3_bucket.id}"
-
+  bucket                    = "${aws_s3_bucket.s3_bucket.id}"
+  block_public_acls         = var.block_public_acls
+  ignore_public_acls        = var.ignore_public_acls
+  block_public_policy       = var.block_public_policy
   restrict_public_buckets   = var.restrict_public_buckets
-  block_public_acls = var.block_public_acls
-  block_public_policy = var.block_public_policy
-  ignore_public_acls = var.ignore_public_acls
+  
 }
 
 
