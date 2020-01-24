@@ -16,5 +16,15 @@ resource "aws_s3_bucket" "s3_bucket" {
       }
     }
   }
-
 }
+
+resource "aws_s3_bucket_public_access_block" "s3_block_public" {
+  bucket = "${aws_s3_bucket.s3_bucket.id}"
+
+  restrict_public_buckets   = var.block_bucket_public_access
+  block_public_acls = var.block_bucket_public_access
+  block_public_policy = var.block_bucket_public_access
+  ignore_public_acls = var.block_bucket_public_access
+}
+
+
