@@ -45,9 +45,3 @@ variable "ignore_public_acls" {
   default = true
   
 }
-
-variable "block_bucket_public_access" {
-  description = "Set block public access variables  "
-  default = true
-  
-}
