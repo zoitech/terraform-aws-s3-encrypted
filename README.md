@@ -13,6 +13,8 @@ Features:
 * Full bucket encryption
 * Canned ACL
 * Optional versioning
+* Restrict public access
+* Tagging
 
 ## Usage Example
 
@@ -31,5 +33,9 @@ module "my_bucket" {
   ignore_public_acls        = true
   block_public_policy       = true
   restrict_public_buckets   = true
+  bucket_tags = {
+    creation      = "terraform"
+    project       = "my-project"
+  }
 }
 ```
