@@ -10,7 +10,7 @@ This module creates the following resources:
 
 Features:
 
-* Full bucket encryption
+* Optional full bucket encryption
 * Canned ACL
 * Optional versioning
 * Restrict public access
@@ -23,7 +23,7 @@ module "my_bucket" {
   providers = {
     "aws" = "aws.module"
   }
-  source            = "git::https://github.com/zoitech/terraform-aws-s3-encrypted.git?ref=1.0.1"
+  source            = "git::https://github.com/zoitech/terraform-aws-s3-encrypted.git?ref=1.1.2"
   bucket_name       = "my-bucket"
   region            = "eu-central-1"
   kms_master_key_id = "arn:aws:kms:us-central-1:111122223333:alias/my-key"

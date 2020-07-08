@@ -48,12 +48,6 @@ variable "kms_master_key_id" {
   default     = ""
 }
 
-variable "server_side_encryption_configuration" {
-  type = map(any)
-  description = "(Optional) A configuration of server-side encryption configuration"
-  default = {}
-}
-
 # tags
 variable "bucket_tags" {
   description = "Tags for the bucket"
