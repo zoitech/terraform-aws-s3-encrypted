@@ -1,3 +1,9 @@
+## 1.1.2
+
+NEW FEATURES:
+
+* Bucket encryption can now be enabled/disabled depending on whether the variable "kms_master_key_id" is set
+
 ## 1.0.2
 
 NEW FEATURES:
